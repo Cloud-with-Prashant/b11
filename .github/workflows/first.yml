@@ -4,7 +4,7 @@ on: push
 
 jobs:
   first:
-    runs-on: 
+    runs-on: ubuntu-latest
     steps:
       - name: print message 
         run: echo "hello guys how are you"
