@@ -12,3 +12,6 @@ jobs:
       - name: show content of /etc/passwd 
         run: sudo cat /etc/passwd 
 
+      - name: show OS details 
+        run: sudo cat /etc/os-release
+
