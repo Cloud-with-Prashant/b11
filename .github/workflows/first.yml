@@ -9,12 +9,4 @@ jobs:
       - name: print message 
         run: echo "hello guys how are you"
 
-      - name: show content of /etc/passwd 
-        run: sudo cat /etc/passwd 
-
-      - name: show OS details 
-        run: sudo cat /etc/os-release
-
-      - name: show files
-        run: sudo ls -l
 
