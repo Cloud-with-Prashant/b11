@@ -7,12 +7,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print message 
-        run: echo "hello guys first stage "
-
+        run: |
+              echo "hello guys first stage "
+              sleep 5
   second:
     runs-on: ubuntu-latest
     steps:
       - name: print message 
-        run: echo "hello guys second stage"
-
+        run: | 
+          echo "hello guys second stage"
+          sleep 5 
 
