@@ -3,11 +3,17 @@ name: b11-workflow
 on: push 
 
 jobs:
-  first:
+  first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: print message 
-        run: echo "hello guys first stage " 
+      - name: print message for 3rd job 
+        run: echo "this is  first job" 
+
+  second-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print message for 2nd job
+        run: echo "this is 2nd job "
           
 
      
