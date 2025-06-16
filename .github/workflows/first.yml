@@ -7,6 +7,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print message 
-        run: echo "hello guys how are you"
+        run: echo "hello guys first stage "
+
+  second:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print message 
+        run: echo "hello guys second stage"
 
 
