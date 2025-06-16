@@ -6,19 +6,17 @@ jobs:
   first-job:
     runs-on: ubuntu-latest
     steps:
-      - name: print message for 3rd job 
-        run: |
-            sleep 10 
-            echo "this is  first job" 
+      - name: create a file 
+        run: echo "this is test reports" > report.txt 
 
   second-job:
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-latest
     needs: first-job
     steps:
-      - name: print message for 2nd job
-        run: |
-          sleep 5  
-          echo "this is 2nd job "
+      - name: viewing the reports from first job
+        run: cat report.txt 
+
+    
           
 
      
