@@ -13,6 +13,7 @@ jobs:
 
   second-job:
     runs-on: ubuntu-22.04
+    needs: first-job
     steps:
       - name: print message for 2nd job
         run: |
