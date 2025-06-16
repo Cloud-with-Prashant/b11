@@ -7,13 +7,17 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: print message for 3rd job 
-        run: echo "this is  first job" 
+        run: |
+            sleep 10 
+            echo "this is  first job" 
 
   second-job:
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - name: print message for 2nd job
-        run: echo "this is 2nd job "
+        run: |
+          sleep 5  
+          echo "this is 2nd job "
           
 
      
