@@ -8,14 +8,26 @@ jobs:
     steps:
       - name: print message 
         run: |
-              echo "hello guys first stage "
               sleep 5
+              echo "hello guys first stage " > test.txt 
+              cat test.txt 
+
+      - name: uploading the test.txt
+        uses: actions/upload-artifact@v4
+        with:
+          name: test.txt   
+
+             
   second:
     runs-on: ubuntu-latest
     needs: first
     steps:
-      - name: print message 
+      - name: downloading test reports 
+        uses: actions/download-artifact@v4
+        with:
+          name: test.txt  
+          
+      - name: view test reports 
         run: | 
-          echo "hello guys second stage"
-          sleep 5 
+          cat test.txt
 
