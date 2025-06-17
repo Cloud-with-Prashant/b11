@@ -11,5 +11,5 @@ jobs:
       - name: Add 10 + 20 using bash custom action
         uses: ./.github/actions/add-numbers-bash
         with:
-          num1: 10
+          num1: 12
           num2: 20
