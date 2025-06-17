@@ -6,10 +6,5 @@ jobs:
   run-addition:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
-
-      - name: Run addition using custom bash action
-        uses: ./.github/actions/add-numbers-bash
-        with:
-          num1: 12
-          num2: 30
+      - name: print name
+        run: echo "hellow world"
