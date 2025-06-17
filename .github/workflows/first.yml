@@ -8,7 +8,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Add 10 + 20 using bash custom action
+      - name: Run addition using custom bash action
         uses: ./.github/actions/add-numbers-bash
         with:
           num1: 12
