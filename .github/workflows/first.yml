@@ -1,6 +1,6 @@
-name: b11-workflow 
+name: b11-workflow
 
-on: push 
+on: push
 
 jobs:
   run-addition:
@@ -8,15 +8,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Add 5 + 10 using custom action
-        uses: ./.github/actions/add-numbers
+      - name: Add 10 + 20 using bash custom action
+        uses: ./.github/actions/add-numbers-bash
         with:
           num1: 10
-          num2: 10
-      
-
-    
-          
-
-     
-
+          num2: 20
