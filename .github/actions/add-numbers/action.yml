@@ -1,0 +1,12 @@
+name: 'Add Numbers Action'
+description: 'Adds two numbers'
+inputs:
+  num1:
+    description: 'First number'
+    required: true
+  num2:
+    description: 'Second number'
+    required: true
+runs:
+  using: 'node16'
+  main: 'index.js'

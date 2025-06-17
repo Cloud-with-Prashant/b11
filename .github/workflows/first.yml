@@ -3,13 +3,16 @@ name: b11-workflow
 on: push 
 
 jobs:
-  first-job:
-    runs-on: [ prod , Linux]
+  run-addition:
+    runs-on: ubuntu-latest
     steps:
-      - name: create a file 
-        run: |
-             echo "this is test reports" > report.txt 
-             cat report.txt
+      - uses: actions/checkout@v4
+
+      - name: Add 5 + 10 using custom action
+        uses: ./github/actions/add-numbers
+        with:
+          num1: 5
+          num2: 10
       
 
     
