@@ -4,7 +4,9 @@ on: push
 
 jobs:
   run-addition:
-    runs-on: ubuntu-latest
+    runs-on: [self-hosted, linux]
     steps:
-      - name: print name
-        run: echo "hellow world"
+      - name: create a file and view it 
+        run: |
+            echo "test" > report.txt 
+            cat report.txt 
