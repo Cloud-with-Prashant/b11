@@ -3,13 +3,12 @@ name: b11-workflow
 on: push
 
 jobs:
-  run-addition:
+  run-echo:
     runs-on: ${{ matrix.os }}
     strategy:
       matrix:
-        os: [ ubuntu-18.04, ubuntu-20.04, ubuntu-22.04 ]
+        os: [ubuntu-20.04, ubuntu-22.04]
 
     steps:
-      - name: print message 
-        run: echo "test"
-          
+      - name: Print test message
+        run: echo "Running on ${{ matrix.os }} — test"
