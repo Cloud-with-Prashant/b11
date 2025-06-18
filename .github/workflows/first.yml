@@ -4,9 +4,12 @@ on: push
 
 jobs:
   run-addition:
-    runs-on: ubuntu-latest
+    runs-on: ${{ matrix.os }}
+    strategy:
+      matrix:
+        os: [ ubuntu-18.04, ubuntu-20.04, ubuntu-22.04 ]
+
     steps:
-      - name: create a file and view it 
-        run: |
-            echo "test" > report.txt 
-            cat report.txt 
+      - name: print message 
+        run: echo "test"
+          
